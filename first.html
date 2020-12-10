@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--refer the JavaScript in HTML Page-->
+    <script src="first.js"></script>
+    <script>
+        window.onload = function(){
+
+          var btnclickme =   document.getElementById('btnclickme');
+          btnclickme.addEventListener('click',function(){
+              alert('Button is Clicked');
+              this.style.backgroundColor = 'red';
+          },false);
+
+          var lststates = document.getElementById("lststates");
+          lststates.addEventListener('change',function(){
+               var value =this.options[this.selectedIndex].value;
+               var text  =this.options[this.selectedIndex].text;
+               alert(value +   '  '  + text); 
+          },false);
+
+         var btnAdd = document.getElementById('btnadd');
+         btnAdd.addEventListener('click',function(){
+             alert('Add =  ' + add(3,4));
+         },false);
+
+         var btnSub = document.getElementById('btnsub');
+         btnSub.addEventListener('click',function(){
+             alert('Sub =  ' + subst(3,4));
+         },false);
+
+
+         var btnMulti = document.getElementById('btnmulti');
+         btnMulti.addEventListener('click',function(){
+             alert('Multi =  ' + multi(3,4));
+         },false);
+
+         var btnDiv = document.getElementById('btndiv');
+         btnDiv.addEventListener('click',function(){
+             alert('Div =  ' + div(3,4));
+         },false);
+
+         for(var i=0; i< 5; i++){
+             console.log('In Loop i  = ' + i);
+         }    
+         console.log('Out of  Loop i  = ' + i);
+
+         i++;
+         console.log('Out of  Loop i after increament = ' + i);
+
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click me" id="btnclickme">
+    <br>
+    <select name="" id="lststates">
+        <option value="MH">Maharashtra</option>
+        <option value="TN">TamilNadu</option>
+        <option value="KR">Karnataka</option>
+        <option value="GJ">Gujarat</option>
+    </select>
+    <br>
+    <input type="button" value="Add" id="btnadd">
+    <br>
+    <input type="button" value="Sub" id="btnsub">
+    <br>
+    <input type="button" value="Multi" id="btnmulti">
+    <br>
+    <input type="button" value="Div" id="btndiv"/>
+</body>
+</html>

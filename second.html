@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var val;
+            var dv = document.getElementById("dv");
+            
+            val = "Mahesh";
+              dv.innerText = val;  
+            val = 123;
+            dv.innerText += val;
+            val = {EmpNo:101, EmpName:'Ajay'};
+            dv.innerText += val;
+            val = new Date();
+            dv.innerText += val;
+            val = true;
+            dv.innerText += val;
+            val = [1,2,3,4,5,6]; 
+            dv.innerText += val;
+        }
+    </script>
+</head>
+<body>
+    <div id="dv"></div>
+</body>
+</html>
